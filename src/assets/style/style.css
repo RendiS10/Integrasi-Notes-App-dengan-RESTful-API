@@ -1,0 +1,224 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* Body */
+body {
+  background-color: #cbf1f5;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #e3fdfd;
+  color: #71c9ce;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main content */
+main {
+  background-color: #cbf1f5;
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+/* Form */
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #71c9ce;
+}
+
+/* Status notes */
+.statusNotes {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #71c9ce;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#statusNotes {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #71c9ce;
+}
+
+#statusNotes > option {
+  color: #fff;
+  background-color: #71c9ce;
+}
+
+/* Note list */
+.noteList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.noteItem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #a6e3e9;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.noteBody {
+  color: white;
+  white-space: pre-line;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+/* Loader */
+.load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
+  display: none;
+  z-index: 9999;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #71c9ce;
+  animation: spin 1s linear infinite;
+}
+
+/* Action */
+.action {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Media query */
+@media screen and (min-width: 720px) {
+  .noteList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Note container */
+div.containerNote {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Judul */
+div.judul {
+  margin-top: 1rem;
+  background-color: #71c9ce;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Note create */
+.noteCreate {
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Archive button */
+.archive-button {
+  background-color: #e8751a;
+}
+
+/* Delete button */
+.button-delete {
+  background-color: #ff204e;
+}
+
+/* Foto container */
+.foto {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
